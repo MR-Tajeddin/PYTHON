@@ -1,17 +1,12 @@
 import pandas as pd
 df=pd.read_csv(r"/Users/alitaj/Desktop/writer.csv")
-
 DF = df.Authors.to_list()
-
 NewDF=[]
 for S in DF:
     NewDF.extend(S.split("; "))
-
 New = pd.Series(NewDF)
-
 Freq = New.value_counts()
 First10 = Freq [:10]
-First10
 
 E = pd.DataFrame(First10)
 Name = list(E.index)
@@ -20,8 +15,6 @@ E1= E.reset_index(drop=True)
 E1.columns = ['Fre','Name']
 E1=E1[['Name','Fre']]
 E1.to_csv(r"/Users/alitaj/Desktop/First10writers.csv")
-
-
 
 import matplotlib.pyplot as plt
 U= E.values
