@@ -5,13 +5,13 @@ import pandas as pd
 
 sender_email = "nezarat@enamad.ir"  # Enter your address
 
-# read an excel file and convert 
+# read an excel file and convert
 # into a dataframe object
-df = pd.DataFrame(pd.read_excel("email14000906.xlsx"))
+df = pd.DataFrame(pd.read_excel("email.xlsx"))
 # show the dataframe
 receiver_email = df["Addresses"]
 #receiver_email = ["yasermat.2010@gmail.com","hnhkshams@gmail.com","mr.tajeddin@gmail.com"]  # Enter receiver address
-password = "Nn"
+password = "Nn$123456"
 
 HOST = "mail.enamad.ir"
 PORT = 56
@@ -21,7 +21,8 @@ print(HOST)
 
 mail = smtplib.SMTP('mail.enamad.ir',465)
 mail.starttls()
-mail.login(sender_email, password) 
+mail.login(sender_email, password)
+count = 0
 for i in range(len(receiver_email)):
 
     message = MIMEMultipart("alternative")
@@ -61,6 +62,7 @@ for i in range(len(receiver_email)):
 
     # Add HTML/plain-text parts to MIMEMultipart message
     # The email client will try to render the last part first
-    message.attach(part2)
-    mail.sendmail(sender_email, receiver_email[i], message.as_string())
-
+    #message.attach(part2)
+    #mail.sendmail(sender_email, receiver_email[i], message.as_string())
+    count =+ 1
+print (" The number of email is : " , count)
