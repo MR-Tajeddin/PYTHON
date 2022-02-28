@@ -1,32 +1,14 @@
-
-import matplotlib.pyplot as plt 
-
-Height = [60,63,66,69,72]
-W_Weight = [108,118,129,140,152]
-M_Weight = [112,126,133,150,160]
-
-
-plt.subplot(211)
-plt.plot (Height, W_Weight, ':og',label="Women")
-plt.xlabel('Height')
-plt.ylabel('Weight')
-plt.title('Weight vs Height')
-#plt.axis ([0,80,0,170])
-#plt.xticks(Height)
-#plt.yticks(Weight)
-plt.legend ()
-plt.grid(True)
+from os import MFD_CLOEXEC
+import numpy as np
+import matplotlib.pyplot as plt
+x = np.linspace (0,10000,100000)
+Cost = 0.001*x**2 - 5*x + 5000
+plt.plot (x,Cost)
 
 
-plt.subplot(212)
-plt.plot (Height,M_Weight, ':or',label="Men")
-plt.xlabel('Height')
-plt.ylabel('Weight')
-plt.title('Weight vs Height')
-#plt.axis ([0,80,0,170])
-#plt.xticks(Height)
-#plt.yticks(Weight)
-plt.legend ()
-plt.grid(True)
-
-plt.show() 
+MC = np.min(Cost)
+Index = np.argmin(Cost)
+MCx = x[Index]
+plt.plot (MCx,MC,'o')
+plt.show()
+print (MCx)
