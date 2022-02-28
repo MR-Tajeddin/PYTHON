@@ -24,7 +24,7 @@ mail.starttls()
 mail.login(sender_email, password)
 count = 0
 for i in range(len(receiver_email)):
-
+    count += 1
     message = MIMEMultipart("alternative")
     message["Subject"] = "هشدار- اعلام تعلیق نماد اعتماد الکترونیکی ( مغایرت از دستورالعمل )"
     message["From"] = "eNAMAD <nezarat@enamad.ir>"
@@ -64,5 +64,6 @@ for i in range(len(receiver_email)):
     # The email client will try to render the last part first
     #message.attach(part2)
     #mail.sendmail(sender_email, receiver_email[i], message.as_string())
-    count =+ 1
-print (" The number of email is : " , count)
+    #print("Email sent to: " + receiver_email[i])
+print (count, "Email is sent ")
+#print (" The receiver email is : " , len(receiver_email))
