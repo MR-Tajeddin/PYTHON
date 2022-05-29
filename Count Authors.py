@@ -17,8 +17,11 @@ E1=E1[['Name','Fre']]
 E1.to_csv(r"/Users/alitaj/Desktop/First10writers.csv")
 
 import matplotlib.pyplot as plt
+
 U= E.values
+
 import numpy as np
+
 U.ndim
 np.squeeze(U)
 plt.bar(E.index, np.squeeze(U), width=0.5, bottom=None, align='center',color='green',edgecolor='yellow')
