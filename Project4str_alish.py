@@ -20,7 +20,6 @@ while i < len(my_list):
 		i -= 1
 		
     i = i + 1
-        
 
 str_new = ''
 for char in my_list:
