@@ -7,7 +7,7 @@ from numpy.core.defchararray import index
 
 x = np.linspace(0,300,3000)
 y =-x**2+100*x+60000
-plt.plot(x,y)
+plt.plot(x,y) 
 
 ymax = np.max(y)
 index = np.argmax (y)
