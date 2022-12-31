@@ -16,7 +16,7 @@ plt.plot(x[index],ymax, 'or')
 
 xmax = np.round (x[index],0)
 s = 'Max Point = '+str (xmax)
-plt.text (x[index],ymax+1000, s)
+plt.text (x[index],ymax+1000, s) 
 plt.show ()
 
 #print (xmax)
