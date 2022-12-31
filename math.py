@@ -1,7 +1,7 @@
 #Find The Optimal Point
 
 from textwrap import indent
-import numpy as np
+import numpy as np 
 import matplotlib.pyplot as plt
 from numpy.core.defchararray import index
 
