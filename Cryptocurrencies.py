@@ -21,3 +21,4 @@ plt.xlabel('Time (Days)')
 plt.ylabel('Price ($)')
 plt.legend()
 plt.show()
+
