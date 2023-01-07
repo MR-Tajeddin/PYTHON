@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 import scipy.stats as stt 
 
 URL = 'https://www.alphavantage.co/query?function=DIGITAL_CURRENCY_DAILY&symbol=ETH&market=USD&apikey=RV1XK080XUBTH2EG&datatype=csv'
+
 Columns = ['timestamp', 'open (USD)', 'high (USD)', 'low (USD)', 'close (USD)', 'volume']
 DF = pd.read_csv(URL, sep = ',', usecols = Columns, header = 0)
 
