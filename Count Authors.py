@@ -1,5 +1,6 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+
 df=pd.read_csv(r"/Users/alitaj/Desktop/writer.csv")
 DF = df.Authors.to_list()
 NewDF=[]
