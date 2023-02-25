@@ -1,5 +1,5 @@
 import pandas as pd
-
+import matplotlib.pyplot as plt
 df=pd.read_csv(r"/Users/alitaj/Desktop/writer.csv")
 DF = df.Authors.to_list()
 NewDF=[]
@@ -18,7 +18,7 @@ E1.columns = ['Fre','Name']
 E1=E1[['Name','Fre']]
 E1.to_csv(r"/Users/alitaj/Desktop/First10writers.csv")
 
-import matplotlib.pyplot as plt
+
 
 U= E.values
 
