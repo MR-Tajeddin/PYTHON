@@ -19,8 +19,6 @@ E1.columns = ['Fre','Name']
 E1=E1[['Name','Fre']]
 E1.to_csv(r"/Users/alitaj/Desktop/First10writers.csv")
 
-
-
 U= E.values
 
 import numpy as np
