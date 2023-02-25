@@ -3,6 +3,7 @@ import pandas as pd
 df=pd.read_csv(r"/Users/alitaj/Desktop/writer.csv")
 DF = df.Authors.to_list()
 NewDF=[]
+
 for S in DF:
     NewDF.extend(S.split("; "))
 New = pd.Series(NewDF)
