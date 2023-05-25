@@ -1,0 +1,5 @@
+# Replace 'file_path' with the path to your data file
+import pandas as pd
+import bamboolib as bam
+data = pd.read_csv('/Users/alitaj/Desktop/top5_leagues_player.csv')
+bam.show(data)
